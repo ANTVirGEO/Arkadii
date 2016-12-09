@@ -740,9 +740,7 @@ class Telegram
         }
 
         $result = Request::setWebhook($url, $path_certificate);
-echo '<pre>';
-print_r($result);
-echo '</pre>';
+
         if (!$result->isOk()) {
             throw new TelegramException(
                 'Webhook was not set! Error: ' . $result->getErrorCode() . ' ' . $result->getDescription()

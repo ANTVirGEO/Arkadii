@@ -301,9 +301,6 @@ class Request
      */
     public static function send($action, array $data = [])
     {
-        echo '<pre>';
-        print_r($data);
-        echo '</pre>';
         self::ensureValidAction($action);
 
         $bot_name = self::$telegram->getBotName();
@@ -313,9 +310,6 @@ class Request
 
             return new ServerResponse($fake_response, $bot_name);
         }
-        echo '<pre>';
-        print_r($bot_name);
-        echo '</pre>';
 
         self::ensureNonEmptyData($data);
 
