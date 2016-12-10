@@ -14,12 +14,14 @@ class weather
     public function __construct()
     {
         $this->getData();
-
     }
 
     private function getData ()
     {
-        $this->data = file_get_contents("http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json"); 
+        $this->data = file_get_contents("http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json");
+        echo '<pre>';
+        print_r($this->data);
+        echo '</pre>';
     }
 
 }
