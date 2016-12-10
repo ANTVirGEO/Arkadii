@@ -21,7 +21,7 @@ $text = $message["text"];
 // Пример обработки команды /start
 
 if ($text == '/start') {
-    $welcomemessage = 'Welcome!!! Check IP/Email for spam giving "check IP/Email" command';
+    $welcomemessage = 'АРКААААААААААААДИЙ!!!';
 
     // Отправляем сформированное сообщение обратно в Telegram пользователю
 
