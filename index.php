@@ -11,10 +11,14 @@ $message = $update["message"];
 $chatId = $message["chat"]["id"];
 $text = $message["text"];
 // Пример обработки команды /start
-if ($text == '/start')
+if ($text == '/start') {
     $output = 'АРКААААААААААААДИЙ!!!';
-elseif ($text == 'тест')
+} elseif ($text == 'тест') {
     $output = "ТЕСТ-ТЕСТ-ТЕСТ!!!";
-else
+} elseif ($text == 'погода') {
+    $vah = new weather();
+    $output = $vah->data;
+} else {
     $output = "WTF r u talking about! ЕВГЕЕЕЕЕНИИИИИИИЙ ИВААААААНООООВИИИИИЧ!!!!";
+}
 file_get_contents($website . "/sendmessage?chat_id=" . $chatId . "&text=" . $output);
