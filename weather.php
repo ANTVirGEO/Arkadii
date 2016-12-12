@@ -9,7 +9,7 @@
 class weather
 {
     public $city = '';
-    public $data = [];
+    public $temp = '';
 
     public function __construct()
     {
@@ -18,10 +18,9 @@ class weather
 
     private function getData ()
     {
-        $this->data = file_get_contents("http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json");
-        echo '<pre>';
-        print_r($this->data);
-        echo '</pre>';
+        $data = json_decode(file_get_contents("http://api.wunderground.com/api/f881b6bf3196ffd6/conditions/q/CA/Novosibirsk.json", true));
+        $this->city = $data->current_observation->display_location->city;
+        $this->temp = $data->current_observation->temp_c;
     }
 
 }
