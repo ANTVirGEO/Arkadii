@@ -23,4 +23,7 @@ if ($text == '/start') {
 } else {
     $output = "WTF r u talking about! ЕВГЕЕЕЕЕНИИИИИИИЙ ИВААААААНООООВИИИИИЧ!!!!";
 }
+echo '<pre>';
+print_r($output);
+echo '</pre>';
 file_get_contents($website . "/sendmessage?chat_id=" . $chatId . "&text=" . $output);
