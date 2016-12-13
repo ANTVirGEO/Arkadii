@@ -1,11 +1,14 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: antvirgeo
- * Date: 10.12.16
- * Time: 17:24
+ * Date: 12.12.16
+ * Time: 20:47
  */
+
+namespace modules;
+
+
 class weather
 {
     public $city = '';
@@ -22,5 +25,4 @@ class weather
         $this->city = $data->current_observation->display_location->city;
         $this->temp = $data->current_observation->temp_c;
     }
-
 }

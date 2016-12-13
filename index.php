@@ -1,4 +1,7 @@
 <?php
+use modules\weather;
+require_once('modules/weather.php');
+
 set_time_limit(0);
 // Установка токена
 $botToken = "301591460:AAEhJBSP6m7Ym-O8TQN5-zDWvhYIsPZTAiU";
@@ -23,7 +26,4 @@ if ($text == '/start') {
 } else {
     $output = "WTF r u talking about! ЕВГЕЕЕЕЕНИИИИИИИЙ ИВААААААНООООВИИИИИЧ!!!!";
 }
-echo '<pre>';
-print_r($output);
-echo '</pre>';
 file_get_contents($website . "/sendmessage?chat_id=" . $chatId . "&text=" . $output);
