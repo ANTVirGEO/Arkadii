@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antvirgeo
- * Date: 12.12.16
- * Time: 20:47
- */
-
 namespace modules;
-
 
 class weather
 {

@@ -1,6 +1,8 @@
 <?php
+use modules\schedulers;
 use modules\weather;
 require_once('modules/weather.php');
+require_once('modules/schedulers.php');
 
 set_time_limit(0);
 // Установка токена
@@ -18,6 +20,10 @@ if ($text == '/start') {
     $output = 'АРКААААААААААААДИЙ!!!';
 } elseif ($text == 'тест') {
     $output = "ТЕСТ-ТЕСТ-ТЕСТ!!!";
+} elseif ($text == 'WH') {
+    $data = new schedulers();
+    $timing = $data->timing;
+    $output = "Ближайшие маршрутки №7 от Технопарка до дома = ";
 } elseif ($text == 'погода') {
     $data = new weather();
     $city = $data->city;
@@ -27,3 +33,6 @@ if ($text == '/start') {
     $output = "WTF r u talking about! ЕВГЕЕЕЕЕНИИИИИИИЙ ИВААААААНООООВИИИИИЧ!!!!";
 }
 file_get_contents($website . "/sendmessage?chat_id=" . $chatId . "&text=" . $output);
+
+
+
