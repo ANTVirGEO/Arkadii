@@ -23,7 +23,7 @@ if ($text == '/start') {
 } elseif ($text == 'WH') {
     $data = new schedulers();
     $timing = $data->timing;
-    $output = "Ближайшие маршрутки №7 от Технопарка до дома = ";
+    $output = "Ближайшие маршрутки №7 от Технопарка до дома = " . $timing;
 } elseif ($text == 'погода') {
     $data = new weather();
     $city = $data->city;
